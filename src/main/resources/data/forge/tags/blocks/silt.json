@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+   {
+      "id": "tfc:dirt/silt",
+      "required": false
+   },{
+      "id": "tfc:grass/silt",
+      "required": false
+    },{
+      "id": "tfc:rooted_dirt/silt",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+   {
+      "id": "tfc:dirt/loam",
+      "required": false
+   },{
+      "id": "tfc:grass/loam",
+      "required": false
+    },{
+      "id": "tfc:rooted_dirt/loam",
+      "required": false
+    }
+  ]
+}

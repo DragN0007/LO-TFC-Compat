@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "dragnlivestock:utility_knife",
+      "required": false
+    },{
+      "id": "dragnlivestock:spindle",
+      "required": false
+    },{
+      "id": "dragnlivestock:mane_scissors",
+      "required": false
+    },{
+      "id": "dragnlivestock:tail_scissors",
+      "required": false
+    },{
+      "id": "dragnlivestock:mount_key",
+      "required": false
+    },{
+      "id": "dragnloextras:stethoscope",
+      "required": false
+    },{
+      "id": "dragnloextras:hoof_pick",
+      "required": false
+    },{
+      "id": "dragnloextras:brush",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+modLoader="javafml"
+loaderVersion="47,)"
+license="All Rights Reserved, DragN0007"
+#issueTrackerURL="https://discord.gg/2WznNTtVac"
+[[mods]]
+modId="livestocktfc"
+version="${1.0}"
+displayName="DragN Livestock x TFC Compat"
+logoFile=".png"
+authors="DragN0007"
+description='''
+An addon to Livestock Overhaul and TerraFirmaCraft, patching in some more extreme compats than what's available in the base LO. This addon is not required for basic compatibility, since it's included in the base Livestock Overhaul, but does add some new features.
+'''
+[[dependencies.livestocktfc]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.livestocktfc]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1]"
+ordering = "NONE"
+side = "BOTH"
+[[dependencies.livestocktfc]]
+modId="geckolib"
+mandatory=true
+versionRange = "[4.4.4,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.livestocktfc]]
+modId="patchouli"
+mandatory=true
+versionRange = "[1.20.1-84,)"
+ordering="NONE"
+side="BOTH"
+#[[dependencies.livestocktfc]]
+#modId="tfc"
+#mandatory=true
+#versionRange = "[)"
+#ordering="NONE"
+#side="BOTH"
+
+[[mixins]]
+config = "livestocktfc.mixins.json"
