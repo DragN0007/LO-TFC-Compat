@@ -35,12 +35,18 @@ mandatory=true
 versionRange = "[1.20.1-84,)"
 ordering="NONE"
 side="BOTH"
-#[[dependencies.livestocktfc]]
-#modId="tfc"
-#mandatory=true
-#versionRange = "[)"
-#ordering="NONE"
-#side="BOTH"
+[[dependencies.livestocktfc]]
+modId="dragnlivestock"
+mandatory=true
+versionRange = "[3.8,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.livestocktfc]]
+modId="tfc"
+mandatory=true
+versionRange = "[3.2.11,)"
+ordering="NONE"
+side="BOTH"
 
 [[mixins]]
 config = "livestocktfc.mixins.json"

@@ -29,11 +29,6 @@ public class PullQuernGoal extends Goal {
 
     @Override
     public boolean canUse() {
-//        if (this.scanCooldown > 0) {
-//            this.scanCooldown--;
-//            return this.centerBlockPos != null;
-//        }
-
         this.scanCooldown = 20;
         this.centerBlockPos = findNearbyBlock();
 
@@ -43,10 +38,6 @@ public class PullQuernGoal extends Goal {
             return false;
         } else if (!(mob.getLeashHolder() instanceof LeashFenceKnotEntity)) {
             return false;
-//        } else if (!mob.isWearingPullingHarness() && !(mob instanceof OCow)) {
-//            return false;
-//        } else if (mob instanceof OCow cow && cow.getBreed() != 10 && !cow.isSaddled()) {
-//            return false;
         } else if (!mob.isTamed()) {
             return false;
         } else if (mob.isVehicle()) {
