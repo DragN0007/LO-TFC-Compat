@@ -1,8 +1,8 @@
 package com.dragn0007.livestocktfc.goal;
 
+import com.dragn0007.dragnlivestock.entities.cow.OCow;
 import com.dragn0007.dragnlivestock.entities.util.AbstractOMount;
 import net.dries007.tfc.common.blocks.TFCBlocks;
-import net.dries007.tfc.common.blocks.devices.QuernBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.decoration.LeashFenceKnotEntity;
@@ -29,19 +29,23 @@ public class PullQuernGoal extends Goal {
 
     @Override
     public boolean canUse() {
-        if (this.scanCooldown > 0) {
-            this.scanCooldown--;
-            return this.centerBlockPos != null;
-        }
+//        if (this.scanCooldown > 0) {
+//            this.scanCooldown--;
+//            return this.centerBlockPos != null;
+//        }
 
         this.scanCooldown = 20;
         this.centerBlockPos = findNearbyBlock();
 
         if (this.centerBlockPos == null) {
             return false;
-//        } else if (!mob.isLeashed()) {
+        } else if (!mob.isLeashed()) {
+            return false;
+        } else if (!(mob.getLeashHolder() instanceof LeashFenceKnotEntity)) {
+            return false;
+//        } else if (!mob.isWearingPullingHarness() && !(mob instanceof OCow)) {
 //            return false;
-//        } else if (!(mob.getLeashHolder() instanceof LeashFenceKnotEntity)) {
+//        } else if (mob instanceof OCow cow && cow.getBreed() != 10 && !cow.isSaddled()) {
 //            return false;
         } else if (!mob.isTamed()) {
             return false;
@@ -59,7 +63,7 @@ public class PullQuernGoal extends Goal {
         boolean blockStillExists = this.mob.level().getBlockState(this.centerBlockPos).is(this.block);
         boolean closeEnough = this.mob.distanceToSqr(this.centerBlockPos.getX(), this.mob.getY(), this.centerBlockPos.getZ()) < 8.0D;
 
-        return blockStillExists && closeEnough;
+        return blockStillExists && closeEnough && canUse();
     }
 
     @Override
@@ -69,7 +73,7 @@ public class PullQuernGoal extends Goal {
 
     @Override
     public void tick() {
-        if (this.centerBlockPos == null) return;
+        if (this.centerBlockPos == null || !this.canUse()) return;
 
         double centerX = this.centerBlockPos.getX() + 0.5D;
         double centerZ = this.centerBlockPos.getZ() + 0.5D;
