@@ -34,7 +34,7 @@ public abstract class QuernMixin extends DeviceBlock implements IHighlightHandle
     @Inject(method = "use", at = @At("HEAD"), cancellable = true)
     private void allowLeashAttachment(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if (!state.is(TFCBlocks.QUERN.get()) || !itemstack.is(Items.LEAD)) {
+        if (!state.is(TFCBlocks.QUERN.get())) {
             return;
         }
 
