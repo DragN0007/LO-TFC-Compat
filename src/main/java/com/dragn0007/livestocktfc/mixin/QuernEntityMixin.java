@@ -29,7 +29,7 @@ public abstract class QuernEntityMixin extends TickableInventoryBlockEntity<Item
 
     @Inject(method = "serverTick", at = @At("HEAD"), remap = false)
     private static void tickAnimal(Level level, BlockPos pos, BlockState state, QuernBlockEntity quern, CallbackInfo ci) {
-        double range = 8.0;
+        double range = 1.5;
         AABB searchBox = new AABB(pos).inflate(range);
         List<AbstractOMount> nearbyPullers = level.getEntitiesOfClass(AbstractOMount.class, searchBox);
 

@@ -63,6 +63,6 @@ public abstract class QuernMixin extends DeviceBlock implements IHighlightHandle
             player.gameEvent(GameEvent.BLOCK_ATTACH);
         }
 
-        cir.setReturnValue(leadStack.is(Items.LEAD) ? InteractionResult.SUCCESS : InteractionResult.PASS);
+//        cir.setReturnValue(leadStack.is(Items.LEAD) ? InteractionResult.SUCCESS : InteractionResult.PASS);
     }
 }
