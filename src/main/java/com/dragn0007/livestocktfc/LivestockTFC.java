@@ -15,8 +15,6 @@ public class LivestockTFC
     public LivestockTFC() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-
-
         GeckoLib.initialize();
         MinecraftForge.EVENT_BUS.register(this);
 
