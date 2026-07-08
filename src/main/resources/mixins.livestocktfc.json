@@ -8,6 +8,8 @@
     "AbstractOMountMixin",
     "CaribouMixin",
     "LeashFenceKnotEntityMixin",
+    "OCowMixin",
+    "OGoatMixin",
     "OHorseMixin",
     "PlowMixin",
     "QuernEntityMixin",

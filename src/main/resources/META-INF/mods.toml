@@ -39,13 +39,13 @@ side="BOTH"
 modId="dragnlivestock"
 mandatory=true
 versionRange = "[3.8,)"
-ordering="NONE"
+ordering="AFTER"
 side="BOTH"
 [[dependencies.livestocktfc]]
 modId="tfc"
 mandatory=true
 versionRange = "[3.2.11,)"
-ordering="NONE"
+ordering="AFTER"
 side="BOTH"
 
 [[mixins]]

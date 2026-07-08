@@ -22,6 +22,8 @@ public class LOTFCTags {
     }
 
     public static class Entity_Types {
+        public static final TagKey<EntityType<?>> DIREWOLF = forgeTag("direwolf");
+
         public static TagKey<EntityType<?>> forgeTag(String name) {
             return TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("forge", name));
         }
