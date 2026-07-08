@@ -1,5 +1,7 @@
 package com.dragn0007.livestocktfc;
 
+import com.dragn0007.livestocktfc.items.CreativeTabModifier;
+import com.dragn0007.livestocktfc.items.LOTFCItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -14,7 +16,8 @@ public class LivestockTFC
 
     public LivestockTFC() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        LOTFCItems.register(eventBus);
+        CreativeTabModifier.register(eventBus);
         GeckoLib.initialize();
         MinecraftForge.EVENT_BUS.register(this);
 

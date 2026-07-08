@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "livestocktfc:caribou_fur"
+    },
+    "B": {
+      "item": "tfc:treated_hide"
+    }
+  },
+  "pattern": [
+    "A A",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "item": "livestocktfc:caribou_hide_chestplate"
+  },
+  "show_notification": true
+}

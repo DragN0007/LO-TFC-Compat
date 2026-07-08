@@ -1,0 +1,61 @@
+package com.dragn0007.livestocktfc.datagen;
+
+import com.dragn0007.livestocktfc.items.LOTFCItems;
+import net.dries007.tfc.common.items.TFCItems;
+import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+
+import java.util.function.Consumer;
+
+public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilder {
+    public LOTFCRecipeMaker(PackOutput pOutput) {
+        super(pOutput);
+    }
+
+    public void buildRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+        buildCommonRecipes(pFinishedRecipeConsumer);
+    }
+
+    public void buildCommonRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.CARIBOU_HIDE_HELMET.get())
+                .define('A', LOTFCItems.CARIBOU_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.CARIBOU_HIDE_CHESTPLATE.get())
+                .define('A', LOTFCItems.CARIBOU_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("A A")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.CARIBOU_HIDE_LEGGINGS.get())
+                .define('A', LOTFCItems.CARIBOU_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("ABA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.CARIBOU_HIDE_BOOTS.get())
+                .define('A', LOTFCItems.CARIBOU_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("A A")
+                .pattern("B B")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+    }
+
+}

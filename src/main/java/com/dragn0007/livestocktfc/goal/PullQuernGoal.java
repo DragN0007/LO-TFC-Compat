@@ -1,6 +1,5 @@
 package com.dragn0007.livestocktfc.goal;
 
-import com.dragn0007.dragnlivestock.entities.cow.OCow;
 import com.dragn0007.dragnlivestock.entities.util.AbstractOMount;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.minecraft.core.BlockPos;
