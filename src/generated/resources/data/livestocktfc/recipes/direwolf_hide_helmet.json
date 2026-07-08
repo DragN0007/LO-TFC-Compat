@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "livestocktfc:direwolf_fur"
+    },
+    "B": {
+      "item": "tfc:treated_hide"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA"
+  ],
+  "result": {
+    "item": "livestocktfc:direwolf_hide_helmet"
+  },
+  "show_notification": true
+}

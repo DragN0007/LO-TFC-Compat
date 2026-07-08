@@ -6,7 +6,9 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AbstractOMountMixin",
+    "CaribouMixin",
     "LeashFenceKnotEntityMixin",
+    "OHorseMixin",
     "PlowMixin",
     "QuernEntityMixin",
     "QuernMixin"

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "livestocktfc:horse_hair"
+    },
+    "B": {
+      "item": "tfc:treated_hide"
+    }
+  },
+  "pattern": [
+    "A A",
+    "B B"
+  ],
+  "result": {
+    "item": "livestocktfc:horse_hide_boots"
+  },
+  "show_notification": true
+}

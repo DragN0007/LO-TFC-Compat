@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "tfc:wool"
+    },
+    "B": {
+      "item": "tfc:medium_sheepskin_hide"
+    }
+  },
+  "pattern": [
+    "A A",
+    "ABA",
+    "AAA"
+  ],
+  "result": {
+    "item": "livestocktfc:sheep_hide_chestplate"
+  },
+  "show_notification": true
+}

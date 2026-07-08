@@ -1,6 +1,7 @@
 package com.dragn0007.livestocktfc.datagen;
 
 import com.dragn0007.livestocktfc.items.LOTFCItems;
+import net.dries007.tfc.common.items.HideItemType;
 import net.dries007.tfc.common.items.TFCItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
@@ -55,6 +56,111 @@ public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilde
                 .pattern("B B")
                 .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.DIREWOLF_HIDE_HELMET.get())
+                .define('A', LOTFCItems.DIREWOLF_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.DIREWOLF_HIDE_CHESTPLATE.get())
+                .define('A', LOTFCItems.DIREWOLF_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("A A")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.DIREWOLF_HIDE_LEGGINGS.get())
+                .define('A', LOTFCItems.DIREWOLF_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("ABA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.DIREWOLF_HIDE_BOOTS.get())
+                .define('A', LOTFCItems.DIREWOLF_FUR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("A A")
+                .pattern("B B")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.HORSE_HIDE_HELMET.get())
+                .define('A', LOTFCItems.HORSE_HAIR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.HORSE_HIDE_CHESTPLATE.get())
+                .define('A', LOTFCItems.HORSE_HAIR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("A A")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.HORSE_HIDE_LEGGINGS.get())
+                .define('A', LOTFCItems.HORSE_HAIR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("ABA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.HORSE_HIDE_BOOTS.get())
+                .define('A', LOTFCItems.HORSE_HAIR.get())
+                .define('B', TFCItems.TREATED_HIDE.get())
+                .pattern("A A")
+                .pattern("B B")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.TREATED_HIDE.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.SHEEP_HIDE_HELMET.get())
+                .define('A', TFCItems.WOOL.get())
+                .define('B', TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get())
+                .pattern("AAA")
+                .pattern("ABA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.SHEEP_HIDE_CHESTPLATE.get())
+                .define('A', TFCItems.WOOL.get())
+                .define('B', TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get())
+                .pattern("A A")
+                .pattern("ABA")
+                .pattern("AAA")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.SHEEP_HIDE_LEGGINGS.get())
+                .define('A', TFCItems.WOOL.get())
+                .define('B', TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get())
+                .pattern("ABA")
+                .pattern("A A")
+                .pattern("A A")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get()).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.SHEEP_HIDE_BOOTS.get())
+                .define('A', TFCItems.WOOL.get())
+                .define('B', TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get())
+                .pattern("A A")
+                .pattern("B B")
+                .unlockedBy("has_treated_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get()).build()))
                 .save(pFinishedRecipeConsumer);
     }
 
