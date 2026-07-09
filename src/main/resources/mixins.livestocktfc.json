@@ -7,10 +7,13 @@
   "mixins": [
     "AbstractOMountMixin",
     "CaribouMixin",
+    "FarmGoatMixin",
     "LeashFenceKnotEntityMixin",
     "OCowMixin",
     "OGoatMixin",
     "OHorseMixin",
+    "OLlamaMixin",
+    "OSheepMixin",
     "PlowMixin",
     "QuernEntityMixin",
     "QuernMixin"

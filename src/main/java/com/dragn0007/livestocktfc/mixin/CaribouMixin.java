@@ -1,7 +1,6 @@
 package com.dragn0007.livestocktfc.mixin;
 
 import com.dragn0007.dragnlivestock.entities.caribou.Caribou;
-import com.dragn0007.dragnlivestock.entities.horse.OHorse;
 import com.dragn0007.dragnlivestock.entities.util.AbstractOMount;
 import com.dragn0007.livestocktfc.items.LOTFCItems;
 import net.minecraft.world.damagesource.DamageSource;
@@ -9,7 +8,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 
 import java.util.Random;
 
