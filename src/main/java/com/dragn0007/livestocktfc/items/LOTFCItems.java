@@ -5,6 +5,7 @@ import com.dragn0007.livestocktfc.items.armor.CaribouArmorItem;
 import com.dragn0007.livestocktfc.items.armor.DirewolfArmorItem;
 import com.dragn0007.livestocktfc.items.armor.HorseArmorItem;
 import com.dragn0007.livestocktfc.items.armor.SheepArmorItem;
+import com.dragn0007.livestocktfc.util.HideArmorTypes;
 import com.dragn0007.livestocktfc.util.LOTFCArmorMaterials;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
@@ -12,6 +13,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.EnumMap;
+import java.util.Map;
 
 public class LOTFCItems {
 
@@ -24,7 +28,16 @@ public class LOTFCItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> HORSE_HAIR = ITEMS.register("horse_hair",
                 () -> new Item(new Item.Properties()));
-    
+
+    public static final Map<HideArmorTypes, RegistryObject<Item>> METAL_CARIBOU_HELMETS = new EnumMap<>(HideArmorTypes.class);
+    static {
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            String name =  "caribou_hide_" + type.getName() + "_helmet";
+            RegistryObject<Item> item = ITEMS.register(name,
+                    () -> new CaribouArmorItem(type.type, ArmorItem.Type.HELMET, new Item.Properties()));
+            METAL_CARIBOU_HELMETS.put(type, item);
+        }
+    }
     public static final RegistryObject<Item> CARIBOU_HIDE_HELMET = ITEMS.register("caribou_hide_helmet",
             () -> new CaribouArmorItem(LOTFCArmorMaterials.HIDE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> CARIBOU_HIDE_CHESTPLATE = ITEMS.register("caribou_hide_chestplate",

@@ -2,6 +2,7 @@ package com.dragn0007.livestocktfc.datagen;
 
 import com.dragn0007.livestocktfc.LivestockTFC;
 import com.dragn0007.livestocktfc.items.LOTFCItems;
+import com.dragn0007.livestocktfc.util.HideArmorTypes;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
@@ -21,6 +22,9 @@ public class LOTFCItemModelProvider extends ItemModelProvider {
         simpleItem(LOTFCItems.DIREWOLF_FUR);
         simpleItem(LOTFCItems.HORSE_HAIR);
 
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            advancedItem(LOTFCItems.METAL_CARIBOU_HELMETS.get(type), "caribou_hide_helmet");
+        }
         simpleItem(LOTFCItems.CARIBOU_HIDE_HELMET);
         simpleItem(LOTFCItems.CARIBOU_HIDE_CHESTPLATE);
         simpleItem(LOTFCItems.CARIBOU_HIDE_LEGGINGS);

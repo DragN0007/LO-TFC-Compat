@@ -48,5 +48,7 @@ versionRange = "[3.2.11,)"
 ordering="AFTER"
 side="BOTH"
 
-[[mixins]]
-config = "mixins.livestocktfc.json"
+mixinConfigs = [
+    "mixins.livestocktfc.json",
+    "mixins.livestocktfc.firmalife.json"
+]

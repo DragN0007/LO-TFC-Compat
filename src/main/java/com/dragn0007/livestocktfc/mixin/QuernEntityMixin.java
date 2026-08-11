@@ -2,6 +2,7 @@ package com.dragn0007.livestocktfc.mixin;
 
 import com.dragn0007.dragnlivestock.entities.util.AbstractOMount;
 import com.dragn0007.livestocktfc.goal.PullQuernGoal;
+import com.dragn0007.livestocktfc.util.LOTFCCommonConfig;
 import net.dries007.tfc.common.blockentities.QuernBlockEntity;
 import net.dries007.tfc.common.blockentities.TickableInventoryBlockEntity;
 import net.dries007.tfc.common.blockentities.rotation.RotationSinkBlockEntity;
@@ -33,10 +34,12 @@ public abstract class QuernEntityMixin extends TickableInventoryBlockEntity<Item
         List<AbstractOMount> nearbyPullers = level.getEntitiesOfClass(AbstractOMount.class, searchBox);
 
         for (AbstractOMount animal : nearbyPullers) {
-            if (animal.goalSelector.getRunningGoals().anyMatch(goal -> goal.getGoal() instanceof PullQuernGoal) && !quern.isGrinding()) {
-                quern.startGrinding();
+//            if (LOTFCCommonConfig.HORSE_QUERN.get()) {
+                if (animal.goalSelector.getRunningGoals().anyMatch(goal -> goal.getGoal() instanceof PullQuernGoal) && !quern.isGrinding()) {
+                    quern.startGrinding();
 //                return;
-            }
+                }
+//            }
         }
     }
 }

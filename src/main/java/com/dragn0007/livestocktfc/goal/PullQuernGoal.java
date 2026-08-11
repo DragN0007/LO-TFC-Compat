@@ -1,6 +1,7 @@
 package com.dragn0007.livestocktfc.goal;
 
 import com.dragn0007.dragnlivestock.entities.util.AbstractOMount;
+import com.dragn0007.livestocktfc.util.LOTFCCommonConfig;
 import net.dries007.tfc.common.blocks.TFCBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.ai.goal.Goal;
@@ -41,6 +42,8 @@ public class PullQuernGoal extends Goal {
             return false;
         } else if (mob.isVehicle()) {
             return false;
+//        } else if (!LOTFCCommonConfig.HORSE_QUERN.get()) {
+//            return false;
         } else {
             return true;
         }

@@ -1,6 +1,7 @@
 package com.dragn0007.livestocktfc.items;
 
 import com.dragn0007.livestocktfc.LivestockTFC;
+import com.dragn0007.livestocktfc.util.HideArmorTypes;
 import net.dries007.tfc.common.TFCCreativeTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -28,6 +29,9 @@ public class CreativeTabModifier {
                event.accept(LOTFCItems.CARIBOU_HIDE_CHESTPLATE);
                event.accept(LOTFCItems.CARIBOU_HIDE_LEGGINGS);
                event.accept(LOTFCItems.CARIBOU_HIDE_BOOTS);
+               for (HideArmorTypes type : HideArmorTypes.values()) {
+                   event.accept(LOTFCItems.METAL_CARIBOU_HELMETS.get(type).get());
+               }
 
                event.accept(LOTFCItems.DIREWOLF_HIDE_HELMET);
                event.accept(LOTFCItems.DIREWOLF_HIDE_CHESTPLATE);

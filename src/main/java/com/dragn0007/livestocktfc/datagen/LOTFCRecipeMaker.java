@@ -1,14 +1,15 @@
 package com.dragn0007.livestocktfc.datagen;
 
 import com.dragn0007.livestocktfc.items.LOTFCItems;
+import com.dragn0007.livestocktfc.util.HideArmorTypes;
 import net.dries007.tfc.common.items.HideItemType;
 import net.dries007.tfc.common.items.TFCItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeProvider;
-import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -23,6 +24,17 @@ public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilde
     }
 
     public void buildCommonRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            Item unfinishedHelmetItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_helmet/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_CARIBOU_HELMETS.get(type).get())
+                    .requires(LOTFCItems.CARIBOU_HIDE_HELMET.get())
+                    .requires(unfinishedHelmetItem)
+                    .unlockedBy("has_caribou_hide_helmet", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.CARIBOU_HIDE_HELMET.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+        }
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.CARIBOU_HIDE_HELMET.get())
                 .define('A', LOTFCItems.CARIBOU_FUR.get())
                 .define('B', TFCItems.TREATED_HIDE.get())

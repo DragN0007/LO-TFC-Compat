@@ -8,9 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 
 public final class DirewolfArmorRenderer extends GeoArmorRenderer<DirewolfArmorItem> {
-
 	public DirewolfArmorRenderer() {
-
 		super(new GeoModel<>() {
 			@Override
 			public ResourceLocation getModelResource(DirewolfArmorItem animatable) {

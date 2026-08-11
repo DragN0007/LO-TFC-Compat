@@ -1,0 +1,15 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "plugin": "com.dragn0007.livestocktfc.compat.firmalife.FirmaLifeMixinPlugin",
+  "package": "com.dragn0007.livestocktfc.compat.firmalife.mixin",
+  "refmap": "mixins.livestocktfc.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "BeehiveFrameItemMixin",
+    "FLBeehiveBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

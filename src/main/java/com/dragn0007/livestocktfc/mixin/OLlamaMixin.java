@@ -1,7 +1,6 @@
 package com.dragn0007.livestocktfc.mixin;
 
 import com.dragn0007.dragnlivestock.entities.llama.OLlama;
-import com.dragn0007.dragnlivestock.entities.sheep.OSheep;
 import com.dragn0007.dragnlivestock.util.LivestockOverhaulCommonConfig;
 import net.dries007.tfc.common.items.TFCItems;
 import net.minecraft.nbt.CompoundTag;

@@ -8,9 +8,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 
 public final class HorseArmorRenderer extends GeoArmorRenderer<HorseArmorItem> {
-
 	public HorseArmorRenderer() {
-
 		super(new GeoModel<>() {
 			@Override
 			public ResourceLocation getModelResource(HorseArmorItem animatable) {

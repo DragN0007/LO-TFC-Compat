@@ -21,7 +21,56 @@ public enum LOTFCArmorMaterials implements ArmorMaterial {
         map.put(ArmorItem.Type.LEGGINGS, 2);
         map.put(ArmorItem.Type.CHESTPLATE, 3);
         map.put(ArmorItem.Type.HELMET, 1);
-    }), 10, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get()));
+    }), 6, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get())),
+
+    COPPER_HIDE("copper_hide", 6, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 1);
+        map.put(ArmorItem.Type.LEGGINGS, 3);
+        map.put(ArmorItem.Type.CHESTPLATE, 4);
+        map.put(ArmorItem.Type.HELMET, 1);
+    }), 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get())),
+
+    BRONZE_HIDE("bronze_hide", 7, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 1);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 4);
+        map.put(ArmorItem.Type.HELMET, 1);
+    }), 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get())),
+
+    WROUGHT_IRON_HIDE("wrought_iron_hide", 8, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 1);
+        map.put(ArmorItem.Type.LEGGINGS, 4);
+        map.put(ArmorItem.Type.CHESTPLATE, 5);
+        map.put(ArmorItem.Type.HELMET, 2);
+    }), 9, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get())),
+
+    STEEL_HIDE("steel_hide", 8, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 2);
+        map.put(ArmorItem.Type.LEGGINGS, 5);
+        map.put(ArmorItem.Type.CHESTPLATE, 6);
+        map.put(ArmorItem.Type.HELMET, 2);
+    }), 12, SoundEvents.ARMOR_EQUIP_LEATHER, 0.5F, 0.1F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get())),
+
+    BLACK_STEEL_HIDE("black_steel_hide", 8, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 2);
+        map.put(ArmorItem.Type.LEGGINGS, 5);
+        map.put(ArmorItem.Type.CHESTPLATE, 6);
+        map.put(ArmorItem.Type.HELMET, 2);
+    }), 17, SoundEvents.ARMOR_EQUIP_LEATHER, 1.0F, 0.2F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get())),
+
+    BLUE_STEEL_HIDE("blue_steel_hide", 8, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 6);
+        map.put(ArmorItem.Type.CHESTPLATE, 8);
+        map.put(ArmorItem.Type.HELMET, 3);
+    }), 23, SoundEvents.ARMOR_EQUIP_LEATHER, 1.5F, 0.5F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get())),
+
+    RED_STEEL_HIDE("red_steel_hide", 8, Util.make(new EnumMap<>(ArmorItem.Type.class), (map) -> {
+        map.put(ArmorItem.Type.BOOTS, 3);
+        map.put(ArmorItem.Type.LEGGINGS, 6);
+        map.put(ArmorItem.Type.CHESTPLATE, 8);
+        map.put(ArmorItem.Type.HELMET, 3);
+    }), 23, SoundEvents.ARMOR_EQUIP_LEATHER, 1.5F, 0.5F, () -> Ingredient.of(TFCItems.TREATED_HIDE.get()));
 
     public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {
