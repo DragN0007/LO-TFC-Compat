@@ -22,6 +22,6 @@ public abstract class CaribouMixin extends AbstractOMount {
     public void dropCustomDeathLoot(DamageSource p_33574_, int p_33575_, boolean p_33576_) {
         super.dropCustomDeathLoot(p_33574_, p_33575_, p_33576_);
         Random random = new Random();
-        this.spawnAtLocation(new ItemStack(LOTFCItems.CARIBOU_FUR.get(), random.nextInt(5)), 0F);
+        this.spawnAtLocation(new ItemStack(LOTFCItems.CARIBOU_FUR.get(), random.nextInt(8)), 0F);
     }
 }

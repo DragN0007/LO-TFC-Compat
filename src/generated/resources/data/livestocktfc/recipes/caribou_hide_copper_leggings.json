@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "livestocktfc:caribou_hide_leggings"
+    },
+    []
+  ],
+  "result": {
+    "item": "livestocktfc:caribou_hide_copper_leggings"
+  }
+}

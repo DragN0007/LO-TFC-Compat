@@ -33,6 +33,30 @@ public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilde
                     .unlockedBy("has_caribou_hide_helmet", inventoryTrigger(ItemPredicate.Builder.item()
                             .of(LOTFCItems.CARIBOU_HIDE_HELMET.get()).build()))
                     .save(pFinishedRecipeConsumer);
+
+            Item unfinishedChestplateItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_chestplate/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_CARIBOU_CHESTPLATES.get(type).get())
+                    .requires(LOTFCItems.CARIBOU_HIDE_CHESTPLATE.get())
+                    .requires(unfinishedChestplateItem)
+                    .unlockedBy("has_caribou_hide_chestplate", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.CARIBOU_HIDE_CHESTPLATE.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedLeggingsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_greaves/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_CARIBOU_LEGGINGS.get(type).get())
+                    .requires(LOTFCItems.CARIBOU_HIDE_LEGGINGS.get())
+                    .requires(unfinishedLeggingsItem)
+                    .unlockedBy("has_caribou_hide_leggings", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.CARIBOU_HIDE_LEGGINGS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedBootsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_boots/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_CARIBOU_BOOTS.get(type).get())
+                    .requires(LOTFCItems.CARIBOU_HIDE_BOOTS.get())
+                    .requires(unfinishedBootsItem)
+                    .unlockedBy("has_caribou_hide_boots", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.CARIBOU_HIDE_BOOTS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
         }
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.CARIBOU_HIDE_HELMET.get())

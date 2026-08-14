@@ -18,7 +18,7 @@ public class ForgeEvent {
         LivingEntity entity = event.getEntity();
         Random random = new Random();
         if (entity.getType().is(LOTFCTags.Entity_Types.DIREWOLF)) {
-            entity.spawnAtLocation(new ItemStack(LOTFCItems.DIREWOLF_FUR.get(), random.nextInt(5)), 0F);
+            entity.spawnAtLocation(new ItemStack(LOTFCItems.DIREWOLF_FUR.get(), random.nextInt(8)), 0F);
         }
     }
 }

@@ -31,6 +31,9 @@ public class CreativeTabModifier {
                event.accept(LOTFCItems.CARIBOU_HIDE_BOOTS);
                for (HideArmorTypes type : HideArmorTypes.values()) {
                    event.accept(LOTFCItems.METAL_CARIBOU_HELMETS.get(type).get());
+                   event.accept(LOTFCItems.METAL_CARIBOU_CHESTPLATES.get(type).get());
+                   event.accept(LOTFCItems.METAL_CARIBOU_LEGGINGS.get(type).get());
+                   event.accept(LOTFCItems.METAL_CARIBOU_BOOTS.get(type).get());
                }
 
                event.accept(LOTFCItems.DIREWOLF_HIDE_HELMET);

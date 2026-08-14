@@ -24,6 +24,9 @@ public class LOTFCItemModelProvider extends ItemModelProvider {
 
         for (HideArmorTypes type : HideArmorTypes.values()) {
             advancedItem(LOTFCItems.METAL_CARIBOU_HELMETS.get(type), "caribou_hide_helmet");
+            advancedItem(LOTFCItems.METAL_CARIBOU_CHESTPLATES.get(type), "caribou_hide_chestplate");
+            advancedItem(LOTFCItems.METAL_CARIBOU_LEGGINGS.get(type), "caribou_hide_leggings");
+            advancedItem(LOTFCItems.METAL_CARIBOU_BOOTS.get(type), "caribou_hide_boots");
         }
         simpleItem(LOTFCItems.CARIBOU_HIDE_HELMET);
         simpleItem(LOTFCItems.CARIBOU_HIDE_CHESTPLATE);

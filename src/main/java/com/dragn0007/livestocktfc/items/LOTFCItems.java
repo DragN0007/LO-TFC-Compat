@@ -38,6 +38,33 @@ public class LOTFCItems {
             METAL_CARIBOU_HELMETS.put(type, item);
         }
     }
+    public static final Map<HideArmorTypes, RegistryObject<Item>> METAL_CARIBOU_CHESTPLATES = new EnumMap<>(HideArmorTypes.class);
+    static {
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            String name =  "caribou_hide_" + type.getName() + "_chestplate";
+            RegistryObject<Item> item = ITEMS.register(name,
+                    () -> new CaribouArmorItem(type.type, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+            METAL_CARIBOU_CHESTPLATES.put(type, item);
+        }
+    }
+    public static final Map<HideArmorTypes, RegistryObject<Item>> METAL_CARIBOU_LEGGINGS = new EnumMap<>(HideArmorTypes.class);
+    static {
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            String name =  "caribou_hide_" + type.getName() + "_leggings";
+            RegistryObject<Item> item = ITEMS.register(name,
+                    () -> new CaribouArmorItem(type.type, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+            METAL_CARIBOU_LEGGINGS.put(type, item);
+        }
+    }
+    public static final Map<HideArmorTypes, RegistryObject<Item>> METAL_CARIBOU_BOOTS = new EnumMap<>(HideArmorTypes.class);
+    static {
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            String name =  "caribou_hide_" + type.getName() + "_boots";
+            RegistryObject<Item> item = ITEMS.register(name,
+                    () -> new CaribouArmorItem(type.type, ArmorItem.Type.BOOTS, new Item.Properties()));
+            METAL_CARIBOU_BOOTS.put(type, item);
+        }
+    }
     public static final RegistryObject<Item> CARIBOU_HIDE_HELMET = ITEMS.register("caribou_hide_helmet",
             () -> new CaribouArmorItem(LOTFCArmorMaterials.HIDE, ArmorItem.Type.HELMET, new Item.Properties()));
     public static final RegistryObject<Item> CARIBOU_HIDE_CHESTPLATE = ITEMS.register("caribou_hide_chestplate",
