@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "livestocktfc:sheep_hide_helmet"
+    },
+    {
+      "item": "tfc:metal/unfinished_helmet/copper"
+    }
+  ],
+  "result": {
+    "item": "livestocktfc:sheep_hide_copper_helmet"
+  }
+}

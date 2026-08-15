@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_direwolf_hide_chestplate": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "livestocktfc:direwolf_hide_chestplate"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "livestocktfc:direwolf_hide_red_steel_chestplate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_direwolf_hide_chestplate",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "livestocktfc:direwolf_hide_red_steel_chestplate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

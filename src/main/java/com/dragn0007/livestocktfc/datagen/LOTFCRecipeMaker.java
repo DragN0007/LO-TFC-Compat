@@ -24,7 +24,6 @@ public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilde
     }
 
     public void buildCommonRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
-
         for (HideArmorTypes type : HideArmorTypes.values()) {
             Item unfinishedHelmetItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_helmet/" + type.getName()));
             ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_CARIBOU_HELMETS.get(type).get())
@@ -94,6 +93,41 @@ public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilde
                         .of(TFCItems.TREATED_HIDE.get()).build()))
                 .save(pFinishedRecipeConsumer);
 
+
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            Item unfinishedHelmetItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_helmet/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_DIREWOLF_HELMETS.get(type).get())
+                    .requires(LOTFCItems.DIREWOLF_HIDE_HELMET.get())
+                    .requires(unfinishedHelmetItem)
+                    .unlockedBy("has_direwolf_hide_helmet", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.DIREWOLF_HIDE_HELMET.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedChestplateItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_chestplate/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_DIREWOLF_CHESTPLATES.get(type).get())
+                    .requires(LOTFCItems.DIREWOLF_HIDE_CHESTPLATE.get())
+                    .requires(unfinishedChestplateItem)
+                    .unlockedBy("has_direwolf_hide_chestplate", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.DIREWOLF_HIDE_CHESTPLATE.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedLeggingsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_greaves/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_DIREWOLF_LEGGINGS.get(type).get())
+                    .requires(LOTFCItems.DIREWOLF_HIDE_LEGGINGS.get())
+                    .requires(unfinishedLeggingsItem)
+                    .unlockedBy("has_direwolf_hide_leggings", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.DIREWOLF_HIDE_LEGGINGS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedBootsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_boots/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_DIREWOLF_BOOTS.get(type).get())
+                    .requires(LOTFCItems.DIREWOLF_HIDE_BOOTS.get())
+                    .requires(unfinishedBootsItem)
+                    .unlockedBy("has_direwolf_hide_boots", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.DIREWOLF_HIDE_BOOTS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+        }
+        
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.DIREWOLF_HIDE_HELMET.get())
                 .define('A', LOTFCItems.DIREWOLF_FUR.get())
                 .define('B', TFCItems.TREATED_HIDE.get())
@@ -129,6 +163,41 @@ public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilde
                         .of(TFCItems.TREATED_HIDE.get()).build()))
                 .save(pFinishedRecipeConsumer);
 
+
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            Item unfinishedHelmetItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_helmet/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_HORSE_HELMETS.get(type).get())
+                    .requires(LOTFCItems.HORSE_HIDE_HELMET.get())
+                    .requires(unfinishedHelmetItem)
+                    .unlockedBy("has_horse_hide_helmet", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.HORSE_HIDE_HELMET.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedChestplateItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_chestplate/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_HORSE_CHESTPLATES.get(type).get())
+                    .requires(LOTFCItems.HORSE_HIDE_CHESTPLATE.get())
+                    .requires(unfinishedChestplateItem)
+                    .unlockedBy("has_horse_hide_chestplate", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.HORSE_HIDE_CHESTPLATE.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedLeggingsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_greaves/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_HORSE_LEGGINGS.get(type).get())
+                    .requires(LOTFCItems.HORSE_HIDE_LEGGINGS.get())
+                    .requires(unfinishedLeggingsItem)
+                    .unlockedBy("has_horse_hide_leggings", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.HORSE_HIDE_LEGGINGS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedBootsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_boots/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_HORSE_BOOTS.get(type).get())
+                    .requires(LOTFCItems.HORSE_HIDE_BOOTS.get())
+                    .requires(unfinishedBootsItem)
+                    .unlockedBy("has_horse_hide_boots", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.HORSE_HIDE_BOOTS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+        }
+        
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.HORSE_HIDE_HELMET.get())
                 .define('A', LOTFCItems.HORSE_HAIR.get())
                 .define('B', TFCItems.TREATED_HIDE.get())
@@ -164,6 +233,41 @@ public class LOTFCRecipeMaker extends RecipeProvider implements IConditionBuilde
                         .of(TFCItems.TREATED_HIDE.get()).build()))
                 .save(pFinishedRecipeConsumer);
 
+
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            Item unfinishedHelmetItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_helmet/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_SHEEP_HELMETS.get(type).get())
+                    .requires(LOTFCItems.SHEEP_HIDE_HELMET.get())
+                    .requires(unfinishedHelmetItem)
+                    .unlockedBy("has_sheep_hide_helmet", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.SHEEP_HIDE_HELMET.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedChestplateItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_chestplate/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_SHEEP_CHESTPLATES.get(type).get())
+                    .requires(LOTFCItems.SHEEP_HIDE_CHESTPLATE.get())
+                    .requires(unfinishedChestplateItem)
+                    .unlockedBy("has_sheep_hide_chestplate", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.SHEEP_HIDE_CHESTPLATE.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedLeggingsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_greaves/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_SHEEP_LEGGINGS.get(type).get())
+                    .requires(LOTFCItems.SHEEP_HIDE_LEGGINGS.get())
+                    .requires(unfinishedLeggingsItem)
+                    .unlockedBy("has_sheep_hide_leggings", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.SHEEP_HIDE_LEGGINGS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+
+            Item unfinishedBootsItem = BuiltInRegistries.ITEM.get(new ResourceLocation("tfc", "metal/unfinished_boots/" + type.getName()));
+            ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, LOTFCItems.METAL_SHEEP_BOOTS.get(type).get())
+                    .requires(LOTFCItems.SHEEP_HIDE_BOOTS.get())
+                    .requires(unfinishedBootsItem)
+                    .unlockedBy("has_sheep_hide_boots", inventoryTrigger(ItemPredicate.Builder.item()
+                            .of(LOTFCItems.SHEEP_HIDE_BOOTS.get()).build()))
+                    .save(pFinishedRecipeConsumer);
+        }
+        
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, LOTFCItems.SHEEP_HIDE_HELMET.get())
                 .define('A', TFCItems.WOOL.get())
                 .define('B', TFCItems.HIDES.get(HideItemType.SHEEPSKIN).get(HideItemType.Size.MEDIUM).get())

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "livestocktfc:horse_hide_boots"
+    },
+    {
+      "item": "tfc:metal/unfinished_boots/steel"
+    }
+  ],
+  "result": {
+    "item": "livestocktfc:horse_hide_steel_boots"
+  }
+}

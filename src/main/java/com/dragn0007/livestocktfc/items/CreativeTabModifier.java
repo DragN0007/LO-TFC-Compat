@@ -40,16 +40,34 @@ public class CreativeTabModifier {
                event.accept(LOTFCItems.DIREWOLF_HIDE_CHESTPLATE);
                event.accept(LOTFCItems.DIREWOLF_HIDE_LEGGINGS);
                event.accept(LOTFCItems.DIREWOLF_HIDE_BOOTS);
+               for (HideArmorTypes type : HideArmorTypes.values()) {
+                   event.accept(LOTFCItems.METAL_DIREWOLF_HELMETS.get(type).get());
+                   event.accept(LOTFCItems.METAL_DIREWOLF_CHESTPLATES.get(type).get());
+                   event.accept(LOTFCItems.METAL_DIREWOLF_LEGGINGS.get(type).get());
+                   event.accept(LOTFCItems.METAL_DIREWOLF_BOOTS.get(type).get());
+               }
 
                event.accept(LOTFCItems.HORSE_HIDE_HELMET);
                event.accept(LOTFCItems.HORSE_HIDE_CHESTPLATE);
                event.accept(LOTFCItems.HORSE_HIDE_LEGGINGS);
                event.accept(LOTFCItems.HORSE_HIDE_BOOTS);
+               for (HideArmorTypes type : HideArmorTypes.values()) {
+                   event.accept(LOTFCItems.METAL_HORSE_HELMETS.get(type).get());
+                   event.accept(LOTFCItems.METAL_HORSE_CHESTPLATES.get(type).get());
+                   event.accept(LOTFCItems.METAL_HORSE_LEGGINGS.get(type).get());
+                   event.accept(LOTFCItems.METAL_HORSE_BOOTS.get(type).get());
+               }
 
                event.accept(LOTFCItems.SHEEP_HIDE_HELMET);
                event.accept(LOTFCItems.SHEEP_HIDE_CHESTPLATE);
                event.accept(LOTFCItems.SHEEP_HIDE_LEGGINGS);
                event.accept(LOTFCItems.SHEEP_HIDE_BOOTS);
+               for (HideArmorTypes type : HideArmorTypes.values()) {
+                   event.accept(LOTFCItems.METAL_SHEEP_HELMETS.get(type).get());
+                   event.accept(LOTFCItems.METAL_SHEEP_CHESTPLATES.get(type).get());
+                   event.accept(LOTFCItems.METAL_SHEEP_LEGGINGS.get(type).get());
+                   event.accept(LOTFCItems.METAL_SHEEP_BOOTS.get(type).get());
+               }
            }
        }
 

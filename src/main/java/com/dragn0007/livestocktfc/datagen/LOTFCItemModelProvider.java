@@ -33,16 +33,34 @@ public class LOTFCItemModelProvider extends ItemModelProvider {
         simpleItem(LOTFCItems.CARIBOU_HIDE_LEGGINGS);
         simpleItem(LOTFCItems.CARIBOU_HIDE_BOOTS);
 
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            advancedItem(LOTFCItems.METAL_DIREWOLF_HELMETS.get(type), "direwolf_hide_helmet");
+            advancedItem(LOTFCItems.METAL_DIREWOLF_CHESTPLATES.get(type), "direwolf_hide_chestplate");
+            advancedItem(LOTFCItems.METAL_DIREWOLF_LEGGINGS.get(type), "direwolf_hide_leggings");
+            advancedItem(LOTFCItems.METAL_DIREWOLF_BOOTS.get(type), "direwolf_hide_boots");
+        }
         simpleItem(LOTFCItems.DIREWOLF_HIDE_HELMET);
         simpleItem(LOTFCItems.DIREWOLF_HIDE_CHESTPLATE);
         simpleItem(LOTFCItems.DIREWOLF_HIDE_LEGGINGS);
         simpleItem(LOTFCItems.DIREWOLF_HIDE_BOOTS);
 
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            advancedItem(LOTFCItems.METAL_HORSE_HELMETS.get(type), "horse_hide_helmet");
+            advancedItem(LOTFCItems.METAL_HORSE_CHESTPLATES.get(type), "horse_hide_chestplate");
+            advancedItem(LOTFCItems.METAL_HORSE_LEGGINGS.get(type), "horse_hide_leggings");
+            advancedItem(LOTFCItems.METAL_HORSE_BOOTS.get(type), "horse_hide_boots");
+        }
         simpleItem(LOTFCItems.HORSE_HIDE_HELMET);
         simpleItem(LOTFCItems.HORSE_HIDE_CHESTPLATE);
         simpleItem(LOTFCItems.HORSE_HIDE_LEGGINGS);
         simpleItem(LOTFCItems.HORSE_HIDE_BOOTS);
 
+        for (HideArmorTypes type : HideArmorTypes.values()) {
+            advancedItem(LOTFCItems.METAL_SHEEP_HELMETS.get(type), "sheep_hide_helmet");
+            advancedItem(LOTFCItems.METAL_SHEEP_CHESTPLATES.get(type), "sheep_hide_chestplate");
+            advancedItem(LOTFCItems.METAL_SHEEP_LEGGINGS.get(type), "sheep_hide_leggings");
+            advancedItem(LOTFCItems.METAL_SHEEP_BOOTS.get(type), "sheep_hide_boots");
+        }
         simpleItem(LOTFCItems.SHEEP_HIDE_HELMET);
         simpleItem(LOTFCItems.SHEEP_HIDE_CHESTPLATE);
         simpleItem(LOTFCItems.SHEEP_HIDE_LEGGINGS);

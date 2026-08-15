@@ -5,7 +5,9 @@
     {
       "item": "livestocktfc:caribou_hide_leggings"
     },
-    []
+    {
+      "item": "tfc:metal/unfinished_greaves/steel"
+    }
   ],
   "result": {
     "item": "livestocktfc:caribou_hide_steel_leggings"

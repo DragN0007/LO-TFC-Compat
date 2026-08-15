@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "livestocktfc:horse_hide_chestplate"
+    },
+    {
+      "item": "tfc:metal/unfinished_chestplate/red_steel"
+    }
+  ],
+  "result": {
+    "item": "livestocktfc:horse_hide_red_steel_chestplate"
+  }
+}
