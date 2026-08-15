@@ -1,5 +1,6 @@
 package com.dragn0007.livestocktfc.mixin;
 
+import com.dragn0007.dragnlivestock.entities.goat.OGoat;
 import com.dragn0007.dragnlivestock.entities.sheep.OSheep;
 import com.dragn0007.dragnlivestock.util.LivestockOverhaulCommonConfig;
 import net.dries007.tfc.common.items.TFCItems;
@@ -8,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
@@ -19,6 +21,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(OSheep.class)
@@ -53,5 +56,25 @@ public abstract class OSheepMixin extends Animal {
             }
         }
         cir.setReturnValue(InteractionResult.sidedSuccess(this.level().isClientSide));
+    }
+
+    @Inject(method = "dropCustomDeathLoot", at = @At("HEAD"))
+    public void dropCustomDeathLoot(DamageSource p_33574_, int p_33575_, boolean p_33576_, CallbackInfo ci) {
+        super.dropCustomDeathLoot(p_33574_, p_33575_, p_33576_);
+        OSheep self = (OSheep) (Object) this;
+        Item rennet = ForgeRegistries.ITEMS.getValue(new ResourceLocation("firmalife", "rennet"));
+        if (rennet != null) {
+            if (LivestockOverhaulCommonConfig.QUALITY.get()) {
+                if (self.isExquisiteQuality()) {
+                    this.spawnAtLocation(new ItemStack(rennet, random.nextInt(3)), 0F);
+                } else if (self.isFantasticQuality()) {
+                    this.spawnAtLocation(new ItemStack(rennet, random.nextInt(2)), 0F);
+                } else if (self.isGreatQuality()) {
+                    this.spawnAtLocation(new ItemStack(rennet, random.nextInt(2)), 0F);
+                } else {
+                    this.spawnAtLocation(new ItemStack(rennet, 1), 0F);
+                }
+            }
+        }
     }
 }
